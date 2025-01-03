@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_hotel_form_inherit" model="ir.ui.view">
+        <field name="name">hotel.hotel.form.inherit</field>
+        <field name="model">hotel.hotel</field>
+        <field name="inherit_id" ref="hotel_management.view_hotel_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Booking History">
+                    <field name="booking_ids">
+                        <tree string="Bookings">
+                            <field name="guest_name"/>
+                            <field name="room_number"/>
+                            <field name="check_in_date"/>
+                            <field name="check_out_date"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
